@@ -1,6 +1,6 @@
 # Frontend Mentor Solutions 🧑🏻‍🎨
 
-Here is a collection of my works. Feel free to provide advices via its community. Thank you :^D
+Here is a collection of my works. Feel free to provide advice via its community. Thank you :^D
 
 | No  | Challenge         | Category | REPO                                                                          | DEMO                                                                |
 | --- | ----------------- | -------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------- |
