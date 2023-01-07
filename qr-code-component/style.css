@@ -1,0 +1,111 @@
+/* import font-family */
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+/* define colours */
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(212, 45%, 89%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --ocean-blue: hsl(228, 45%, 44%);
+  --dark-blue: hsl(218, 44%, 22%);
+}
+
+/* reset css style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h1 {
+  overflow-wrap: break-word;
+}
+
+/* setting css style */
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: var(--light-gray);
+  font-family: "Outfit", sans-serif;
+}
+
+main {
+  background-color: var(--white);
+  width: 320px;
+  height: 497px;
+  border-radius: 20px;
+  box-shadow: 0.25rem 0.25rem 1.5rem rgba(0 0 0/0.1);
+}
+
+.container {
+  padding: 1rem;
+  text-align: center;
+}
+
+/* card-top */
+
+.qr-code {
+  width: 288px;
+  height: 288px;
+}
+
+.qr-code img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* card-bottom */
+
+h1,
+p {
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--dark-blue);
+}
+
+p {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--grayish-blue);
+}
+
+/* footer */
+
+footer.attribution {
+  position: fixed;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: var(--white);
+}
+
+.attribution a {
+  color: var(--ocean-blue);
+}
