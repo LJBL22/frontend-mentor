@@ -1,11 +1,125 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
-*,
-::before,
-::after {
-  font-family: "Outfit", sans-serif;
+/* general */
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --dark-blue-main-BG: hsl(217, 54%, 11%);
+  --dark-blue-card-BG: hsl(216, 50%, 16%);
+  --dark-blue-for-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
 }
 
+/* reset css style */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p,
+h3 {
+  overflow-wrap: break-word;
+}
+
+/* setting css style */
+
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-size: 18px;
+  background-color: var(--dark-blue-main-BG);
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  background-color: var(--dark-blue-card-BG);
+  width: 350px;
+  height: 596px;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+main {
+  color: var(--soft-blue);
+}
+
+.card-img-container {
+  position: relative;
+  width: 302px;
+  height: 302px;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  background-color: var(--cyan);
+  opacity: 1;
+  transition: opacity 0.3s;
+  /* parent add this */
+  cursor: pointer;
+}
+
+.card-img-container .view {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* children add this  */
+  pointer-events: none;
+}
+.card-img-container:hover .view {
+  opacity: 1;
+}
+.card-img-container .cube {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.card-img-container .cube:hover {
+  opacity: 0.5;
+}
+
+h3,
+span {
+  color: var(--white);
+}
+
+span {
+  font-weight: 300;
+}
+
+h3:hover,
+span:hover {
+  color: var(--cyan);
+}
+
+.eth {
+  color: var(--cyan);
+}
+
+.info {
+  display: flex;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
