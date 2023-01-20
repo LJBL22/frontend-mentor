@@ -7,7 +7,12 @@
   --dark-blue-main-BG: hsl(217, 54%, 11%);
   --dark-blue-card-BG: hsl(216, 50%, 16%);
   --dark-blue-for-line: hsl(215, 32%, 27%);
+  --opacity-blue-footer: hsla(215, 52%, 70%, 0.416);
   --white: hsl(0, 0%, 100%);
+}
+
+.mb {
+  margin-bottom: 1rem;
 }
 
 /* reset css style */
@@ -45,7 +50,7 @@ body {
 }
 
 body {
-  font-size: 18px;
+  font-size: 1rem;
   background-color: var(--dark-blue-main-BG);
   font-family: "Outfit", sans-serif;
   font-weight: 300;
@@ -102,8 +107,17 @@ h3,
   color: var(--white);
 }
 
+h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 1.05rem;
+}
+
 span {
-  font-weight: 300;
   vertical-align: middle;
 }
 
@@ -116,6 +130,7 @@ h3:hover,
 .nft-data {
   display: flex;
   justify-content: space-between;
+  padding-top: 4px;
 }
 
 .nft-data img {
@@ -123,26 +138,29 @@ h3:hover,
   margin-right: 0.5rem;
 }
 
+.creator-info {
+  border-top: 1px solid var(--dark-blue-for-line);
+  padding-top: 1rem;
+}
+
 .avatar {
   vertical-align: middle;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   border-radius: 50%;
   border: solid var(--white) 1px;
-  width: 2rem;
+  width: 2.2rem;
 }
 footer {
   position: fixed;
   bottom: 0px;
   line-height: 1.2rem;
   width: 100%;
-  background-color: hsla(215, 52%, 70%, 0.416);
-  color: antiquewhite;
-  text-decoration: none;
+  background-color: var(--opacity-blue-footer);
 }
 .attribution {
-  font-size: 11px;
+  font-size: 0.7rem;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: inherit;
 }
