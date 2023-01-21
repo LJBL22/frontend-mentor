@@ -1,20 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
-/* general */
-:root {
-  --soft-blue: hsl(215, 51%, 70%);
-  --cyan: hsl(178, 100%, 50%);
-  --dark-blue-main-BG: hsl(217, 54%, 11%);
-  --dark-blue-card-BG: hsl(216, 50%, 16%);
-  --dark-blue-for-line: hsl(215, 32%, 27%);
-  --opacity-blue-footer: hsla(215, 52%, 70%, 0.416);
-  --white: hsl(0, 0%, 100%);
-}
-
-.mb {
-  margin-bottom: 1rem;
-}
-
 /* reset css style */
 * {
   box-sizing: border-box;
@@ -40,37 +25,49 @@ h3 {
   overflow-wrap: break-word;
 }
 
+/* general */
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --dark-blue-main-BG: hsl(217, 54%, 11%);
+  --dark-blue-card-BG: hsl(216, 50%, 16%);
+  --dark-blue-for-line: hsl(215, 32%, 27%);
+  --opacity-blue-footer: hsla(215, 52%, 70%, 0.416);
+  --white: hsl(0, 0%, 100%);
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
 /* setting css style */
 
-html,
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-body {
-  font-size: 1rem;
   background-color: var(--dark-blue-main-BG);
+  font-size: 1rem;
   font-family: "Outfit", sans-serif;
   font-weight: 300;
 }
 
-.container {
-  background-color: var(--dark-blue-card-BG);
+main.container {
   width: 350px;
   height: 596px;
   padding: 1.5rem;
   border-radius: 15px;
+  background-color: var(--dark-blue-card-BG);
   color: var(--soft-blue);
 }
 
+/* main img */
 .card-img-container {
   position: relative;
   width: 302px;
   height: 302px;
+  border-radius: 12px;
   margin-bottom: 1.5rem;
-  border-radius: 10px;
   background-color: var(--cyan);
   opacity: 1;
   transition: opacity 0.3s;
@@ -87,9 +84,7 @@ body {
   /* children add this  */
   pointer-events: none;
 }
-.card-img-container:hover .view {
-  opacity: 1;
-}
+
 .card-img-container .cube {
   position: absolute;
   top: 0;
@@ -98,9 +93,14 @@ body {
   border-radius: 10px;
 }
 
-.card-img-container .cube:hover {
+.card-img-container:hover .view {
+  opacity: 1;
+}
+.card-img-container:hover .cube {
   opacity: 0.5;
 }
+
+/* description */
 
 h3,
 .creator {
@@ -108,7 +108,7 @@ h3,
 }
 
 h3 {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.5rem;
 }
 
@@ -128,7 +128,7 @@ h3:hover,
 }
 
 .cyan {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .nft-data {
@@ -138,14 +138,13 @@ h3:hover,
 }
 
 .nft-data img {
-  vertical-align: sub;
+  vertical-align: middle;
   margin-right: 0.5rem;
 }
 
 .creator-info {
   border-top: 1px solid var(--dark-blue-for-line);
   padding-top: 1rem;
-  font-weight: 400;
 }
 
 .avatar {
@@ -155,6 +154,8 @@ h3:hover,
   border: solid var(--white) 1px;
   width: 2.2rem;
 }
+
+/* footer */
 footer {
   position: fixed;
   bottom: 0px;
