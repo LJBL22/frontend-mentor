@@ -25,6 +25,10 @@ h1 {
   overflow-wrap: break-word;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* general */
 :root {
   --soft-blue: hsl(215, 51%, 70%);
@@ -72,7 +76,7 @@ main.container {
   opacity: 1;
   transition: opacity 0.3s;
   /* parent add this */
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .card-img-container .view {
@@ -81,8 +85,8 @@ main.container {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
-  /* children add this  */
-  pointer-events: none;
+  /* children add this 
+  pointer-events: none; */
 }
 
 .card-img-container .cube {
