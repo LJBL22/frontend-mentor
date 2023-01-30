@@ -106,12 +106,12 @@ main.container {
 
 /* description */
 
-h1,
+.card-title,
 .creator {
   color: var(--white);
 }
 
-h1 {
+.card-title {
   font-weight: 600;
   font-size: 1.5rem;
 }
@@ -125,7 +125,7 @@ span {
   vertical-align: middle;
 }
 
-h1:hover,
+.card-title:hover,
 .creator:hover,
 .cyan {
   color: var(--cyan);
