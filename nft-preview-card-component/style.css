@@ -70,8 +70,7 @@ main.container {
   position: relative;
   width: 302px;
   height: 302px;
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 12px;
   margin-bottom: 1.5rem;
   background-color: var(--cyan);
   opacity: 1;
@@ -95,7 +94,7 @@ main.container {
   top: 0;
   left: 0;
   max-width: 100%;
-  /* border-radius: 10px; */
+  border-radius: 10px;
 }
 
 .card-img-container:hover .view {
