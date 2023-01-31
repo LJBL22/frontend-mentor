@@ -66,42 +66,34 @@ main.container {
 }
 
 /* main img */
-.card-img-container {
+.main-img-container {
   position: relative;
-  width: 302px;
-  height: 302px;
-  border-radius: 12px;
-  margin-bottom: 1.5rem;
+  display: block;
   background-color: var(--cyan);
-  opacity: 1;
-  transition: opacity 0.3s;
-  /* parent add this */
-  /* cursor: pointer; */
+  background-image: url(./images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.card-img-container .view {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  /* children add this 
-  pointer-events: none; */
-}
-
-.card-img-container .cube {
+/* .main-img-container::before {
+  content: "";
+  display: block;
+  background-image: url(./images/image-equilibrium.jpg);
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 100%;
-  border-radius: 10px;
+  width: 100%;
+  object-fit: cover;
+} */
+
+.main-img-container:hover .cube {
+  opacity: 0.5;
 }
 
-.card-img-container:hover .view {
+.main-img-container:hover .main-img-container::before {
   opacity: 1;
-}
-.card-img-container:hover .cube {
-  opacity: 0.5;
 }
 
 /* description */
