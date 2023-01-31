@@ -69,6 +69,11 @@ main.container {
 .main-img-container {
   position: relative;
   display: block;
+}
+
+.main-img-container::before {
+  content: "";
+  display: block;
   background-color: var(--cyan);
   background-image: url(./images/icon-view.svg);
   background-repeat: no-repeat;
@@ -76,17 +81,6 @@ main.container {
   border-radius: 10px;
   overflow: hidden;
 }
-
-/* .main-img-container::before {
-  content: "";
-  display: block;
-  background-image: url(./images/image-equilibrium.jpg);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
-} */
 
 .main-img-container:hover .cube {
   opacity: 0.5;
