@@ -74,16 +74,19 @@ main.container {
 .main-img-container::before {
   content: "";
   display: block;
-  background-color: var(--cyan);
+  /* Use hsla color format to control the opacity of the
+      color */
+  background-color: hsla(178, 100%, 50%, 0.5);
   background-image: url(./images/icon-view.svg);
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
   overflow: hidden;
-}
-
-.main-img-container:hover .cube {
-  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .main-img-container:hover .main-img-container::before {
