@@ -17,6 +17,7 @@ body {
 }
 img {
   /* display: block; */
+  /* would like to remain inline when it comes to the two minor icons, yet affect the major cube pic height issue   */
   max-width: 100%;
 }
 
@@ -69,9 +70,17 @@ main.container {
 .main-img-container {
   position: relative;
   display: block;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.main-img-container::before {
+/* to avoid the line-height issue */
+.cube {
+  display: block;
+}
+
+.main-img-container:hover::before {
+  /* first hover, then pseudo element shows up! */
   content: "";
   display: block;
   /* Use hsla color format to control the opacity of the
@@ -80,8 +89,6 @@ main.container {
   background-image: url(./images/icon-view.svg);
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 10px;
-  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -89,12 +96,7 @@ main.container {
   bottom: 0;
 }
 
-.main-img-container:hover .main-img-container::before {
-  opacity: 1;
-}
-
 /* description */
-
 .card-title,
 .creator {
   color: var(--white);
