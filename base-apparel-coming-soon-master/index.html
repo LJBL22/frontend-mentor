@@ -22,37 +22,84 @@
     <title>Frontend Mentor | Base Apparel coming soon page</title>
   </head>
   <body>
-    <header><img src="./images/logo.svg" alt="logo" /></header>
-    <picture>
-      <source media="(min-width:798px)" srcset="./images/hero-desktop.jpg" />
-      <img src="./images/hero-mobile.jpg" alt="main-pic" />
-    </picture>
-    <main>
-      <h1>
-        <span class="first-line">We're</span><br /><span class="second-line"
-          >coming soon</span
-        >
-      </h1>
-      <p class="main-text">
-        Hello fellow shoppers! We're currently building our new fashion store.
-        Add your email below to stay up-to-date with announcements and our
-        launch deals.
-      </p>
-      <div class="sign-up">
-        <input class="email-input" type="email" placeholder="Email Address" />
-        <button class="form-submit-btn">
-          <img src="./images/icon-arrow.svg" alt="" />
-        </button>
-      </div>
-    </main>
+    <div class="container">
+      <header><img src="./images/logo.svg" alt="logo" /></header>
+      <picture>
+        <source media="(min-width:798px)" srcset="./images/hero-desktop.jpg" />
+        <img src="./images/hero-mobile.jpg" alt="main-pic" />
+      </picture>
+      <main>
+        <h1>
+          <span class="first-line">We're</span><br /><span class="second-line"
+            >coming soon</span
+          >
+        </h1>
+        <p class="main-text">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <form action="" class="sign-up">
+          <input
+            class="email-input"
+            type="email"
+            placeholder="Email Address"
+            required="required"
+          />
+          <!-- 原生寫法會有疏漏 -->
+          <!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
+          <input type="submit" class="form-submit-btn" value />
+          <img
+            class="icon-error"
+            src="./images/icon-error.svg"
+            alt="validation"
+          />
+          <img class="icon-arrow" src="./images/icon-arrow.svg" alt="submit" />
+          <p class="error-msg">Please provide a valid email</p>
+        </form>
+      </main>
 
-    <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="https://github.com/LJBL22">LJBL22</a>.
-      </p>
-    </footer>
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by <a href="https://github.com/LJBL22">LJBL22</a>.
+        </p>
+      </footer>
+    </div>
+
+    <script>
+      const submitBtn = document.querySelector('.form-submit-btn');
+      const errorIcon = document.querySelector('.icon-error');
+
+      submitBtn.addEventListener('click', checkValidation);
+
+      function checkValidation() {
+        event.preventDefault();
+        console.log('check check');
+        const emailInput = document.querySelector('.email-input');
+        const errorMsg = document.querySelector('.error-msg');
+
+        // 使用原生 pattern 會有漏洞
+        // if (!emailInput.validity.valid) {
+
+        // 使用自定義的正則表達式進行詳細驗證
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const isValidEmail = emailRegex.test(emailInput.value);
+
+        if (!isValidEmail) {
+          // 如果輸入無效，顯示錯誤消息
+          errorMsg.style.visibility = 'visible';
+          errorIcon.style.visibility = 'visible';
+          emailInput.classList.add('invalid');
+        } else {
+          // 如果輸入有效，隱藏錯誤消息
+          errorMsg.style.visibility = 'hidden';
+          errorIcon.style.visibility = 'hidden';
+          emailInput.classList.remove('invalid');
+        }
+      }
+    </script>
   </body>
 </html>
