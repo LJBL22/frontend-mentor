@@ -76,8 +76,7 @@
       submitBtn.addEventListener('click', checkValidation);
 
       function checkValidation() {
-        event.preventDefault();
-        console.log('check check');
+        event.preventDefault(); //to prevent the browser notification text
         const emailInput = document.querySelector('.email-input');
         const errorMsg = document.querySelector('.error-msg');
 
