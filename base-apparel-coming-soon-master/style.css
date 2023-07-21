@@ -113,6 +113,7 @@ h1 {
   position: absolute;
   top: 0;
   right: 0;
+  text-indent: -99999px;
 }
 
 .form-submit-btn:hover {

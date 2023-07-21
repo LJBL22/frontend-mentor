@@ -24,11 +24,14 @@
   <body>
     <div class="container">
       <header><img src="./images/logo.svg" alt="logo" /></header>
-      <picture>
-        <source media="(min-width:798px)" srcset="./images/hero-desktop.jpg" />
-        <img src="./images/hero-mobile.jpg" alt="main-pic" />
-      </picture>
       <main>
+        <picture>
+          <source
+            media="(min-width:798px)"
+            srcset="./images/hero-desktop.jpg"
+          />
+          <img src="./images/hero-mobile.jpg" alt="main-pic" />
+        </picture>
         <h1>
           <span class="first-line">We're</span><br /><span class="second-line"
             >coming soon</span
@@ -48,7 +51,7 @@
           />
           <!-- 原生寫法會有疏漏 -->
           <!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
-          <input type="submit" class="form-submit-btn" value />
+          <input type="submit" class="form-submit-btn" value="submit" />
           <img
             class="icon-error"
             src="./images/icon-error.svg"
@@ -58,7 +61,6 @@
           <p class="error-msg">Please provide a valid email</p>
         </form>
       </main>
-
       <footer>
         <p class="attribution">
           Challenge by

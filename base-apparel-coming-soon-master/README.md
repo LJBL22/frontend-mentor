@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [FEM discussion](https://www.frontendmentor.io/solutions/rwd-page-with-email-validation-OInnMUtyb6)
 - Live Site URL: [DEMO](https://ljbl22.github.io/frontend-mentor/base-apparel-coming-soon-master/)
 
 ## My process
@@ -70,11 +70,14 @@ CSS
 - linear-gradient
 - difference between `visibility: hidden` and `display: block`
 - center footer
+- **new** Utilize the `text-indent` property to conceal the text that should remain hidden
 
 HTML
 
 - picture & srcset
 - email validation by input pattern
+- **new** should include a value on the input button to enhance accessibility [ref](https://dequeuniversity.com/rules/axe/4.6/input-button-name?application=axeAPI)
+- **new** keep the structure inside landmarks, e.g. `header` `nav` `main` `footer` [ref](https://dequeuniversity.com/rules/axe/4.6/region?application=axeAPI)
 
 JavaScript
 
