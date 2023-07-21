@@ -10,7 +10,7 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned-or-practiced)
+  - [What I learned](#what-i-learned-or-practised)
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
@@ -61,7 +61,7 @@ Users should be able to:
 - Mobile-first workflow
 - vanilla JavaScript
 
-### What I learned or practiced
+### What I learned or practised
 
 CSS
 
@@ -70,14 +70,17 @@ CSS
 - linear-gradient
 - difference between `visibility: hidden` and `display: block`
 - center footer
-- **new** Utilize the `text-indent` property to conceal the text that should remain hidden
+- **updated** Utilize the `text-indent` property to conceal the text that should remain hidden
 
 HTML
 
 - picture & srcset
+
+  - **updated** after reviewing other peers' works, replaced with a `div` using `background-image` to achieve RWD
+
 - email validation by input pattern
-- **new** should include a value on the input button to enhance accessibility [ref](https://dequeuniversity.com/rules/axe/4.6/input-button-name?application=axeAPI)
-- **new** keep the structure inside landmarks, e.g. `header` `nav` `main` `footer` [ref](https://dequeuniversity.com/rules/axe/4.6/region?application=axeAPI)
+- **updated** should include a value on the input button to enhance accessibility [ref](https://dequeuniversity.com/rules/axe/4.6/input-button-name?application=axeAPI)
+- **updated** keep the structure inside landmarks, e.g. `header` `nav` `main` `footer` [ref](https://dequeuniversity.com/rules/axe/4.6/region?application=axeAPI)
 
 JavaScript
 
@@ -103,3 +106,7 @@ JavaScript
 ## Acknowledgments
 
 Thank you **Frontend Mentor** :heart:
+
+Updated with viewing [@AlexsanderCostaDEV](https://github.com/AlexsanderCostaDEV/base-apparel-coming-soon/blob/main/css/style.css)
+
+Another suggestion to maintain `picture` element, thanks [Kaylo](https://www.frontendmentor.io/solutions/rwd-page-with-email-validation-OInnMUtyb6)

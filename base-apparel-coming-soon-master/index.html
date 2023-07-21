@@ -25,41 +25,41 @@
     <div class="container">
       <header><img src="./images/logo.svg" alt="logo" /></header>
       <main>
-        <picture>
-          <source
-            media="(min-width:798px)"
-            srcset="./images/hero-desktop.jpg"
-          />
-          <img src="./images/hero-mobile.jpg" alt="main-pic" />
-        </picture>
-        <h1>
-          <span class="first-line">We're</span><br /><span class="second-line"
-            >coming soon</span
-          >
-        </h1>
-        <p class="main-text">
-          Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our
-          launch deals.
-        </p>
-        <form action="#" class="sign-up">
-          <input
-            class="email-input"
-            type="email"
-            placeholder="Email Address"
-            required="required"
-          />
-          <!-- 原生寫法會有疏漏 -->
-          <!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
-          <input type="submit" class="form-submit-btn" value="submit" />
-          <img
-            class="icon-error"
-            src="./images/icon-error.svg"
-            alt="validation"
-          />
-          <img class="icon-arrow" src="./images/icon-arrow.svg" alt="submit" />
-          <p class="error-msg">Please provide a valid email</p>
-        </form>
+        <div class="right"></div>
+        <div class="left">
+          <h1>
+            <span class="first-line">We're</span><br /><span class="second-line"
+              >coming soon</span
+            >
+          </h1>
+          <p class="main-text">
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <form action="#" class="sign-up">
+            <input
+              class="email-input"
+              type="email"
+              placeholder="Email Address"
+              required="required"
+            />
+            <!-- 原生寫法會有疏漏 -->
+            <!-- pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" -->
+            <input type="submit" class="form-submit-btn" value="submit" />
+            <img
+              class="icon-error"
+              src="./images/icon-error.svg"
+              alt="validation"
+            />
+            <img
+              class="icon-arrow"
+              src="./images/icon-arrow.svg"
+              alt="submit"
+            />
+            <p class="error-msg">Please provide a valid email</p>
+          </form>
+        </div>
       </main>
       <footer>
         <p class="attribution">

@@ -14,6 +14,10 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 html,
 body,
 ::placeholder,
@@ -23,6 +27,7 @@ body,
   font-weight: 300;
   color: var(--desaturated-red);
 }
+
 html,
 body {
   margin: 0 auto;
@@ -38,12 +43,8 @@ body {
 }
 
 /* header & pic */
-header,
-main {
-  padding: 10%;
-}
-
 header {
+  padding: 8%;
   text-align: left;
 }
 
@@ -51,11 +52,23 @@ header > img {
   height: 1.2rem;
 }
 
-picture > img {
-  width: 100%;
+/* main */
+main {
+  display: flex;
+  flex-direction: column;
 }
 
-/* main */
+.right {
+  width: 100%;
+  height: 249px;
+  background-image: url(./images/hero-mobile.jpg);
+  background-size: cover;
+}
+
+.left {
+  padding: 10%;
+}
+
 h1 {
   text-transform: uppercase;
   letter-spacing: 0.3em;
@@ -160,44 +173,49 @@ footer {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--dark-grayish-red);
 }
 
 /* desktop */
 @media screen and (min-width: 798px) {
+  /* not a good idea, avoid to change rem points */
   :root {
     font-size: 1.5rem;
   }
+
   body {
     background-image: url(./images/bg-pattern-desktop.svg);
     background-repeat: repeat;
     text-align: left;
   }
 
-  picture {
+  header {
     position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%;
-    max-width: 50%;
-  }
-  picture > img {
-    object-fit: contain;
+    top: 8%;
+    left: 11.5%;
+    padding: 0;
   }
 
-  header {
-    padding: 5% 0 5% 10%;
-  }
   header > img {
-    height: 1.5rem;
+    height: 1.3rem;
   }
+
   main {
-    padding: 0 10%;
-    width: 50%;
+    flex-direction: row-reverse;
   }
+
+  .right {
+    height: 100vh;
+    background-image: url(./images/hero-desktop.jpg);
+  }
+
+  .left {
+    padding: 11.5% 11.5% 0 11.5%;
+  }
+
   .first-line,
   .second-line {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .main-text {
@@ -205,6 +223,11 @@ footer {
     font-size: 0.7rem;
     font-weight: 400;
   }
+
+  .sign-up {
+    margin: 1.5rem 0;
+  }
+
   ::placeholder {
     font-size: 0.75rem;
   }
